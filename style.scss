@@ -2,21 +2,86 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    $accent:#b284be;
+   
 }
 
+:root{
+    --accent:#41246F;
+    --accent-light:#b284be;
+    --text-dark:#303030;
+   --background-color:#ffffff;
+    --footer-button-hover:#ffffff;
+
+}
 body{
-    background-color: rgb(255, 255, 255);
-    color:#303030;
+    background-color:var(--background-color);
+    color:var(--text-dark);
     font-family: "Roboto",Helvetica,sans-serif;
 }
+
+.preload{
+    //background-color: #3B3E47;
+    background: radial-gradient(50% 50% at 50% 50%, rgba(254, 255, 255, 0.052) 2.65%, rgba(59, 62, 71, 0.2) 100%), #3B3E47;
+    color:#EBF2F8;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+   p{
+     position: relative;
+     transform: translateY(-50%);
+     font-size: 2rem;
+     letter-spacing: 5px;
+     animation: text-clip 5s 0.6s cubic-bezier(0.5, 0, 0.1, 1) both;
+   }
+   .underline{
+     position: relative;
+     width: 550px;
+     height: 1px;
+     background-color:#EBF2F8 ;
+     animation: line-clip 3s 0.5s cubic-bezier(0.5, 0, 0.1, 1) both;
+
+   }
+  }
+
+  @keyframes text-clip {
+    from {
+      clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
+    }
+    to {
+      clip-path: polygon(100% 0, 0 0, 0 0, 100% 0);
+      
+    }
+  }
+
+  @keyframes line-clip {
+    from {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+    to {
+      clip-path: polygon(50% 0, 50% 0, 50% 100%, 50% 100%);
+    }
+  }
+
+  @keyframes underline {
+    from {
+      clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+      
+    }
+    to {
+      clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
+      
+    }
+  }
 
 header{
     position: fixed;
 	top: 0;
     left: 0;
     width: 100%;
-    z-index: 9999;
+    z-index: 999;
     background-color: rgb(255, 255, 255);
     transition: all 300ms ease-in-out;
     nav{
@@ -49,19 +114,38 @@ header{
             }
         }
     }
+
+
+   
+
 }
 
 .wrapper{
     display: grid;
     grid-template-columns: 5% 1fr 1fr 5%;
 
+    .heading-section{   
+        grid-column: 1/5;
+        height: 50vh;
+        //border:1px solid green;
+      //  background-color: #F4FFFF;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        h1{
+            font-family: "Playfair Display", Georgia, 'Times New Roman', Times, serif;
+            font-size: 4rem;
+            font-weight: 400;
+        }
 
+        
+    }
   .homepage{
       height: 100vh;
       grid-column: 1/6;
       display: grid;
       grid-template-columns: 5% 1fr 1fr 5%;
-      border: 1px solid rgb(240, 240, 240);
+     // border: 1px solid rgb(240, 240, 240);
       color: #303030;
       //background-color:#013641;//#000000;// #031319;
       margin-left: 0rem;
@@ -157,25 +241,7 @@ header{
 
 
   }
-// .explanation{
-//     margin: 10%;
-//     grid-column: 1/5;
-//     font-family: "Playfair Display";
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: space-around;
-//     align-items: center;
-//     h1{
-//         font-size: 3rem;
-//         font-weight: 400;
-//     }
-//     p{
-//         font-family: "Roboto";
-//         font-size: 1.5rem;
-//         font-weight: 300;
-//         margin: 0.8%;
-//     }
-// }
+
 
 .project-page{
     grid-column: 1/5;
@@ -183,23 +249,7 @@ header{
     grid-template-columns: 5% 1fr 1fr 5%;
     height: auto;
     //background-color: #EDF6E5;
-   
-    .heading-section{   
-        grid-column: 1/5;
-        height: 50vh;
-        //border:1px solid green;
-      //  background-color: #F4FFFF;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        h1{
-            font-family: "Playfair Display", Georgia, 'Times New Roman', Times, serif;
-            font-size: 4rem;
-            font-weight: 400;
-        }
-
-        
-    }
+ 
 .project-container{
      grid-column: 2/4;
      height: 100vh;  
@@ -221,36 +271,47 @@ header{
         font-weight: 400;
     }
     p{
-        margin-top: 0.5rem;
+        margin: 1rem 0rem;
         letter-spacing: 1px;
         line-height: 1.5rem;
         font-family: "Roboto," Georgia, 'Times New Roman', Times, serif;
     }
-    
-    a{
-        margin: 1rem 0rem;
-        width: 8rem;
-        text-decoration: none;
-        background: none;
-        border: none;
-        background-color: #41246F;
-        color:#ffffff;
-        padding: 0.6rem 0.8rem;
-        font-size:1rem;
-        font-weight:500;
-        text-align: center;
+    .project-links{
 
-        &:hover{
-            background-color:#b284be;
-            color:#EDF6E5;
-            }
-            &:active{
-                background-color:#303030;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        margin-top: 1rem;
+        li{
+            list-style: none;
+            margin-right: 1rem;
+        }
+        a{
+            margin: 1rem 0rem;
+            width: 8rem;
+            text-decoration: none;
+            background: none;
+            border: none;
+            background-color: #41246F;
+            color:#ffffff;
+            padding: 0.6rem 0.8rem;
+            font-size:1rem;
+            font-weight:500;
+            text-align: center;
+    
+            &:hover{
+                background-color:#b284be;
                 color:#EDF6E5;
-            }
-        
-       
-      }
+                }
+                &:active{
+                    background-color:#303030;
+                    color:#EDF6E5;
+                }
+            
+           
+          }
+    }
+   
     }
 
     .project-image-container{
@@ -311,28 +372,68 @@ header{
 
 .about-page{
     grid-column: 1/5;
-  
     display: grid;
     grid-template-columns: 5% 1fr 1fr 5%;
     height: auto;
-    //background-color: #EDF6E5;
-   
-    .heading-section{   
-        grid-column: 1/5;
-        height: 50vh;
-        //border:1px solid green;
-      //  background-color: #F4FFFF;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        h1{
-            font-family: "Playfair Display", Georgia, 'Times New Roman', Times, serif;
-            font-size: 4rem;
-            font-weight: 400;
-        }
 
+    .about-container{
+        grid-column:1/5 ;
+        display: grid;
+        grid-template-columns: 5% 1fr 1fr 5%;
+        height: 100vh;
+       .left-column{
+           grid-column: 2/3;
+           display: flex;
+           flex-direction: column;
+           margin: 2rem;
+           
+           .name-heading{
+            display: flex;
+            flex-direction: column;
+            h1{
+                font-family: "Playfair Display", Georgia, 'Times New Roman', Times, serif;
+                letter-spacing: -1px;
+                font-size: 3rem;
+                font-weight: 600;
+                color: var(--accent);
+            }
+            h2{
+                font-size: 1.2rem;
+                font-weight: 300;
+                font-style: italic;
+                color: var(--accent-light);
+            }
+           }
+           .about-text{
+               margin: 1rem 0;
+               font-size: 1.4rem;
+               line-height: 2.5rem;
+               font-weight: 300;
+               font-family: "Roboto",Arial, Helvetica, sans-serif;
+           }
         
+       }
+       .right-column{
+           grid-column: 3/4;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+        .about-img{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+           
+           img{
+               width: 80%;
+               
+              
+           }
+        }
+       }
+       
     }
+
+  
 }
 
 .contact-page{
