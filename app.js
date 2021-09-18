@@ -22,13 +22,7 @@ window.addEventListener("scroll", () => {
 });
 
 
-TweenMax.to(".preload",3,{
-    height:"0vh",
-    opacity:"1",
-    ease:Expo.easeInOut,
-    delay:0.6
-    
-});
+
 // function init(){
 
 
@@ -63,17 +57,17 @@ TweenMax.to(".preload",3,{
 //     }
 //     init();
 
-var myTween;
-function onMouseMove(event) {
-  if(myTween)
-    myTween.kill();
+// var myTween;
+// function onMouseMove(event) {
+//   if(myTween)
+//     myTween.kill();
   
-  mouseX = ( event.clientX / window.innerWidth ) * 2 - 1;
-  mouseY = - ( event.clientY / window.innerHeight ) * 2 + 1;
-  myTween = gsap.to(particles.rotation, {duration: 0.1, x: mouseY*-1, y: mouseX});
-  //particles.rotation.x = mouseY*-1;
-  //particles.rotation.y = mouseX;
-}
+//   mouseX = ( event.clientX / window.innerWidth ) * 2 - 1;
+//   mouseY = - ( event.clientY / window.innerHeight ) * 2 + 1;
+//   myTween = gsap.to(particles.rotation, {duration: 0.1, x: mouseY*-1, y: mouseX});
+//   //particles.rotation.x = mouseY*-1;
+//   //particles.rotation.y = mouseX;
+// }
 // animate();
 
 // Scaling animation

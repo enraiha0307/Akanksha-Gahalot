@@ -10,10 +10,6 @@
     <title>Akanksha Gahalot</title>
 </head>
 <body>
-    <section class="preload">
-        <p>WELCOME TO MY PORTFOLIO</p>
-        <div class="underline"></div>
-    </section>
     <header>
         <nav>
             <h1 class="logo">PORTFOLIO</h1>
@@ -27,13 +23,13 @@
                     <a href="index.html">Home</a>
                 </li>
                 <li>
-                    <a href="">Work</a>
+                    <a href="#work">Work</a>
                 </li>   
                 <li>
-                    <a href="">About</a>
+                    <a href="#about">About</a>
                 </li>
                 <li>
-                    <a href="">Contact</a>
+                    <a href="#contact">Contact</a>
                 </li>
             </ul>
         </nav>
@@ -41,7 +37,7 @@
    <div class="wrapper">
 
        <section class="homepage">
-           <div class="hero-text">
+           <div class="hero-text gs_reveal ">
 
                <h1>HI, I'M <span>AKANKSHA</span></h1>
                <h2>I Solve Problems With  </h2>
@@ -54,10 +50,9 @@
                   <li><a href="https://dribbble.com/Akku_0307">Dribble</a></li>
               </ul>
            </div>
-           <div class="hero-svg">
+           <div class="hero-svg ">
           <img src="./imgs/hero.jpeg" alt="hero-image"/>
-            
-                        
+                     
            </div>
        </section>
        <!-- <section class="explanation ">
@@ -66,14 +61,14 @@
        </section> -->
        <section class="project-page">
            <div class="heading-section">
-               <h1> RECENT WORK</h1>
+               <h1 id="work"> RECENT WORK</h1>
            </div>
            <div class="project-container">
                <div class="project-desc-container gs_reveal">
                    <h1>ADOPT-ME</h1>
                    <p>A Pet Adoption Website built with React and a public pet API.</p>
                    <ul class="project-links">
-                    <li><a href="https://github.com/enraiha0307/Adopt-Me"> Open Case Study  </a></li>
+                    <!-- <li><a href="https://github.com/enraiha0307/Adopt-Me"> Open Case Study  </a></li> -->
                        <li><a href="https://github.com/enraiha0307/Adopt-Me"> Visit Github  </a></li>
                       
                               
@@ -88,23 +83,24 @@
            </div>
 
 
-           <div class="project-container">
-            <div class="project-image-container gs_reveal gs_reveal_fromLeft">
-               <div class="img">
-               <img src="./imgs/smarthome.png" alt="Image"/>
-               </div>
-              
-           </div>
+           <div class="project-container ">
+          
             <div class="project-desc-container gs_reveal">
                 <h1>A Secure Authentication Scheme for IoT</h1>
                 <p> A stable IoT system mutual authentication scheme by incorporating steganography, using an image’s alpha channel, to achieve a higher level of protection against various known attacks.</p>
                 <ul class="project-links">
-                    <li><a href="https://github.com/enraiha0307/Demo"> Open Case Study  </a></li>
+                    <!-- <li><a href="https://github.com/enraiha0307/Demo"> Open Case Study  </a></li> -->
                     <li><a href="https://github.com/enraiha0307/Demo"> Visit Github  </a></li>
                    
                            
                 </ul>
                 
+            </div>
+            <div class="project-image-container gs_reveal gs_reveal_fromLeft">
+                <div class="img">
+                <img src="./imgs/smarthome.png" alt="Image"/>
+                </div>
+               
             </div>
            
         </div>
@@ -135,8 +131,8 @@
        </section>
        <section class="view-page  ">
        <ul>
-            <li><a href="./project.html">View More</a></li>
-            <li><a href="https://github.com/enraiha0307">View Github</a></li>
+            <!-- <li><a href="./project.html">View More</a></li> -->
+            <li><a href="https://github.com/enraiha0307">View more on Github</a></li>
         </ul>
        </section>
        <!-- <section class="contact-page">
@@ -183,7 +179,7 @@
        </section> -->
        <section class="about-page">
         <div class="heading-section">
-            <h1>ABOUT</h1>
+            <h1 id="about">ABOUT</h1>
         </div>
         <div class="about-container">
 
@@ -217,7 +213,7 @@
        </section>
 
        <section class="footer">
-           <h2>Connect with me at</h2>
+           <h2 id="contact">Connect with me at</h2>
            <ul>
             <li>
                 <a href="https://www.linkedin.com/in/akanksha-gahalot-0307/">LinkedIn</a>
