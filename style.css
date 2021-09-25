@@ -474,7 +474,7 @@ header nav .nav-open .social-links {
 }
 
 .wrapper .project-page .project-container .project-image-container .img img {
-  width: 18rem;
+  width: 15rem;
   -webkit-animation: image-zoom 5s ease-out both;
           animation: image-zoom 5s ease-out both;
 }
