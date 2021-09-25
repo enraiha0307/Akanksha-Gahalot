@@ -3,23 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&family=Roboto&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="./style.css">
+    <script src="picturefill.min.js"></script>
     <title>Akanksha Gahalot</title>
 </head>
 <body>
     <header>
         <nav>
             <h1 class="logo">PORTFOLIO</h1>
-            <!-- <svg class="menu" width="30" height="24" viewBox="0 0 60 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <line y1="2" x2="59.9896" y2="2" stroke="#303030" stroke-width="4"/>
-                <line x1="0.0105286" y1="22" x2="60.0002" y2="22" stroke="#303030" stroke-width="4"/>
-                </svg> -->
+           
                 
-            <ul>
-                <li>
+            
+                <!-- <li class="hide">
                     <a href="index.html">Home</a>
                 </li>
                 <li>
@@ -28,10 +27,34 @@
                 <li>
                     <a href="#about">About</a>
                 </li>
-                <li>
+                <li class="hide">
                     <a href="#contact">Contact</a>
-                </li>
-            </ul>
+                </li> -->
+            
+                    <svg class="menu" width="30" height="24" viewBox="0 0 60 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <line y1="2" x2="59.9896" y2="2" stroke="#303030" stroke-width="4"/>
+                        <line x1="0.0105286" y1="22" x2="60.0002" y2="22" stroke="#303030" stroke-width="4"/>
+                        </svg>
+               
+                <div class="nav-open">
+                    <!-- <div class="contact">
+                        <h3>Mail</h3>
+                        <p>akankshagahlot0307@gmail.com</p>
+                        
+                    </div> -->
+                    <div class="social">
+                        
+                        <div class="social-links">
+                       <ul>
+                        <li><a href="#home"> Home</a></li>
+                           <li><a href="#work"> Work</a></li>
+                           <li><a href="#about"> About</a></li>
+                           <li><a href="#contact"> Contact</a></li>
+                       </ul>
+                    </div>
+                    </div>
+                </div>   
+            
         </nav>
     </header>
    <div class="wrapper">
@@ -51,7 +74,7 @@
               </ul>
            </div>
            <div class="hero-svg ">
-          <img src="./imgs/hero.jpeg" alt="hero-image"/>
+             <img src="./imgs/hero6000.jpeg" alt="hero-image"/>
                      
            </div>
        </section>
@@ -61,7 +84,9 @@
        </section> -->
        <section class="project-page">
            <div class="heading-section">
+               
                <h1 id="work"> RECENT WORK</h1>
+               <img src="./imgs/underline.png" alt="underline" >
            </div>
            <div class="project-container">
                <div class="project-desc-container gs_reveal">
@@ -76,7 +101,13 @@
                </div>
                <div class="project-image-container gs_reveal gs_reveal_fromRight">
                    <div class="img">
-                   <img src="./imgs/adoptme.png" alt="Image"/>
+                    <picture>
+                        <source srcset="./imgs/adoptme1600.png" media="(min-width: 1024px)">
+                        <source srcset="./imgs/adoptme1600.png" media="(min-width: 1200px)">
+                        <!-- <source srcset="img/peace-pie-500.jpg" media="(min-width: 800px)"> -->
+                            <img src="./imgs/adoptme250.png" alt="Image"/>
+                  </picture>
+                  
                    </div>
                   
                </div>
@@ -98,7 +129,12 @@
             </div>
             <div class="project-image-container gs_reveal gs_reveal_fromLeft">
                 <div class="img">
-                <img src="./imgs/smarthome.png" alt="Image"/>
+                <picture>
+                    <source srcset="./imgs/smarthome1600.png" media="(min-width: 1024px)">
+                    <source srcset="./imgs/smarthome1600.png" media="(min-width: 1200px)">
+                    <img src="./imgs/smarthome250.png" alt="Image"/>
+                </picture>                    
+                
                 </div>
                
             </div>
@@ -122,7 +158,12 @@
             </div>
             <div class="project-image-container gs_reveal gs_reveal_fromRight">
                 <div class="img">
-                <img src="./imgs/CrimePrediction-1.png" alt="Image"/>
+                    <picture>
+                        <source srcset="./imgs/CrimePrediction1600.png" media="(min-width: 1024px)">
+                        <source srcset="./imgs/CrimePrediction1600.png" media="(min-width: 1200px)">
+                            <img src="./imgs/CrimePrediction250.png" alt="Image"/>
+                    </picture> 
+                
                 </div>
                
             </div>
@@ -180,10 +221,11 @@
        <section class="about-page">
         <div class="heading-section">
             <h1 id="about">ABOUT</h1>
+            <img src="./imgs/underline.png" alt="underline" >
         </div>
         <div class="about-container">
 
-            <div class="left-column">
+         
                 <div class="name-heading">
                     <h1>Akanksha Gahalot</h1>
                     <h2>akankshagahlot0307@gmail.com</h2>
@@ -198,14 +240,8 @@
                         Making things standout in today's busy digital landscape where we are overwhelmed by thousands of screens is my end goal. </p>
                     <p> </p>
                 </div>
-            </div>
-
-            <div class="right-column">
-                <div class="about-img">
-
-                    <img src="./imgs/hero.jpeg" alt="about-photo">
-                </div>
-            </div>
+          
+          
            
         </div>
    

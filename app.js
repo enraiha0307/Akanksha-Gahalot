@@ -1,3 +1,5 @@
+document.createElement( "picture" );
+
 const body = document.body;
 let lastScroll = 0;
 
@@ -23,39 +25,32 @@ window.addEventListener("scroll", () => {
 
 
 
-// function init(){
+function init(){
 
+	const hamburger = document.querySelector(".menu");
+	const navOpen = document.querySelector(".nav-open");
+	const social = document.querySelectorAll(".social");
+	const logo = document.querySelector(".logo");
+	const hlines = document.querySelectorAll(".menu line");
+	
+	const tl = new TimelineMax( {paused: 'true', reversed: 'true' } );
+	tl.to(navOpen, 0.5, {y:0})
+	// .fromTo(contact, 0.5, {opacity: 0, y:10}, {opacity: 1, y:0}, '-=0.1')
+	.fromTo(social, 0.5, {opacity: 0, y:10}, {opacity: 1, y:0},'-=0.5')
+	.fromTo(logo, 0.2, {color: '#303030'}, {color: '#ffffff'}, '-=1')
+	.fromTo(hlines, 0.2, {stroke: '#303030'}, {stroke: '#ffffff'}, '-=1');
+	
+	
+	hamburger.addEventListener("click", () => {
+		tl.reversed() ? tl.play() : tl.reverse();
+	})
+	navOpen.addEventListener("click", () => {
+		tl.reversed() ? tl.play() : tl.reverse();
+	})
 
-//     const hamburger = document.querySelector(".menu");
-//     const navOpen = document.querySelector(".nav-open");
-//     // const contact = document.querySelectorAll(".contact h3,p ");
-//     const social = document.querySelectorAll(".social");
-//     const logo = document.querySelector(".logo");
-//     const hlines = document.querySelectorAll(".menu line");
-//     const navLinks = document.querySelectorAll(".nav-links  a ");
-    
-//     const tl = new TimelineMax( {paused: 'true', reversed: 'true' } );
-//     tl.to(navOpen, 0.5, {y:0})
-//     // .fromTo(contact, 0.5, {opacity: 0, y:10}, {opacity: 1, y:0}, '-=0.1')
-//     .fromTo(social, 0.5, {opacity: 0, y:10}, {opacity: 1, y:0},'-=0.5')
-//     .fromTo(logo, 0.2, {color: '#303030'}, {color: '#ffffff'}, '-=1')
-//     .fromTo(hlines, 0.2, {stroke: '#303030', fill:"#303030"}, {stroke: 'white', fill:"white"}, '-=1');
-    
-    
-//     hamburger.addEventListener("click", () => {
-//         tl.reversed() ? tl.play() : tl.reverse();
-//     });
-
-//     navLinks.forEach((navLink)=>{
-
-//     navLink.addEventListener("click", () => {
-//         tl.reverse();
-//     }
-//     )});
-    
-
-//     }
-//     init();
+	}
+init();
+	
 
 // var myTween;
 // function onMouseMove(event) {
