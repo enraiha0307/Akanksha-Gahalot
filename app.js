@@ -1,5 +1,3 @@
-document.createElement( "picture" );
-
 const body = document.body;
 let lastScroll = 0;
 
@@ -52,28 +50,6 @@ function init(){
 init();
 	
 
-// var myTween;
-// function onMouseMove(event) {
-//   if(myTween)
-//     myTween.kill();
-  
-//   mouseX = ( event.clientX / window.innerWidth ) * 2 - 1;
-//   mouseY = - ( event.clientY / window.innerHeight ) * 2 + 1;
-//   myTween = gsap.to(particles.rotation, {duration: 0.1, x: mouseY*-1, y: mouseX});
-//   //particles.rotation.x = mouseY*-1;
-//   //particles.rotation.y = mouseX;
-// }
-// animate();
-
-// Scaling animation
-// var animProps = {scale: 1, xRot: 0, yRot: 0};
-// gsap.to(animProps, {duration: 10, scale: 1.2, repeat: -1, yoyo: true, ease: "sine", onUpdate: function() {
-//   renderingParent.scale.set(animProps.scale,animProps.scale,animProps.scale);
-// }});
-
-// gsap.to(animProps, {duration: 120, xRot: Math.PI * 2, yRot: Math.PI * 4, repeat: -1, yoyo: true, ease: "none", onUpdate: function() {
-//   renderingParent.rotation.set(animProps.xRot,animProps.yRot,0);
-// }});
 
 
 function animateFrom(elem, direction) {
