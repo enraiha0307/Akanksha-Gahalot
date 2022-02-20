@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Nova+Oval&display=swap');
 
 *,*::after,*::before{
     margin: 0;
@@ -62,12 +62,6 @@ header{
     background-color: var(--background-color);
     transition: all 300ms ease-in-out;
     nav{
-        // display: flex;
-        // justify-content: space-between;
-        // margin: 2rem;
-
-
-        
             min-height: 10vh;
             width: 90%;
             margin: auto;
@@ -3223,7 +3217,6 @@ header{
     }
     
     }
-   
 
  
 }
@@ -3645,7 +3638,6 @@ header{
         
         }
        
-    
-     
+
     
     }
