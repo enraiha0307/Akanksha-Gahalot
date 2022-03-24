@@ -8,6 +8,12 @@
    
 }
 
+@mixin gradient-1 {
+    background-image: url("./imgs/HOLOGRAPHIC2.png");
+    
+    
+}
+
 :root{
     --accent:#41246F;
     --accent-light:#b284be;
@@ -458,6 +464,50 @@ header{
     
 }
 
+.new-about{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin: 2rem;
+    @include gradient-1();
+    font-family: "Nova Oval",sans-serif;
+    .about-ecclipse{
+        .ecclipse-1{
+        animation: little-skew-down 4s infinite alternate;
+    }
+    
+    .ecclipse-2{
+        animation: little-skew-up 4s  infinite alternate;
+    }
+    }
+
+    h1{
+        color:#1a192e;
+        font-size: 7rem;
+    }
+    img{
+        width: 11rem;
+    }
+    a{
+        font-family: "Nova Oval",sans-serif;
+        letter-spacing: 2px;
+        text-decoration: none;
+        color: #1a192e;
+        font-size: 1.8rem;
+
+        &:hover{
+            color: #ffffff;
+            text-decoration: underline;
+            transition: all 0.3s ease-out;
+        }
+    }
+
+    
+    
+    
+}        
 .about-page{
     height: auto;
     display: grid;
@@ -511,99 +561,6 @@ header{
 
   
 }
-
-// .contact-page{
-//     grid-column: 1/5;
-//     display: grid;
-//     grid-template-columns: 5% 1fr 1fr 5%;
-//     height: 150vh;
-    
-//      //background-color: #F4FFFF;
-//     .heading-section{   
-//         grid-column: 1/5;
-//         height: 50vh;
-//         //border:1px solid green;
-//         //background-color: #F4FFFF;
-//         display: flex;
-//         justify-content: center;
-//         align-items: center;
-//         border-bottom: 1px solid #41246F;
-//         h1{
-//             font-family: "Playfair Display", Georgia, 'Times New Roman', Times, serif;
-//             font-size: 4rem;
-//             font-weight: 400;
-//         }
-
-        
-//     }
-//     .left-column{
-//         grid-column: 1/3;
-//         position: relative;
-//         height: 100vh;
-      
-//     }
-//     .right-column{
-//         grid-column: 3/5;
-//         height: 100vh;
-//         display: flex;
-//         flex-direction: column;
-//         align-items: center;
-//         justify-content: space-evenly;
-
-//         .form-heading{
-//             display: flex;
-//             flex-direction: column;
-//             align-items: center;
-//             h1{
-//                 font-family: "Playfair Display", Georgia, 'Times New Roman', Times, serif;
-//             font-size: 2.5rem;
-//             font-weight: 500;
-//             }
-//             h3{
-//                 font-family: "Playfair Display", Georgia, 'Times New Roman', Times, serif;
-//             font-size: 1rem;
-//             font-weight: 400;
-//             }
-//         }
-
-//         .form-container{
-//             form{
-//                 //border: 1px solid blue;
-//                 display: flex;
-//                 flex-direction: column;
-//                 align-items: flex-start;
-//                 font-family: "Roboto", Georgia, 'Times New Roman', Times, serif;
-//                 font-size: 1.5rem;
-//                 font-weight: 200;
-//                 letter-spacing: 1px;
-//                 label,input{
-//                     width: 20rem;
-//                     margin: 1rem;
-                
-//                 }
-//                 input{
-//                     border: none;
-//                     border-bottom: 1px solid black;
-//                     background: none;
-//                     position: relative;
-//                     left: -5%;
-//                 }
-//                 button{
-//                     width: 8rem;
-//                     height: 2.5rem;
-//                     border:none;
-//                     background-color: #41246F;
-//                     color:#ffffff;
-//                     font-size: 1rem;
-//                     &:hover{
-//                         background-color: #303030;
-//                         color: #FFFFFF;
-//                     }
-//                 }
-//             }
-//         }
-//     }
-// }
 
 .footer{
 
@@ -674,7 +631,17 @@ header{
 }
 
 }
+@keyframes line-expand {
+    0%{
+        
+        transform-origin: center;
+    }
+    100%{
+        
+        transform-origin: center;
 
+    }
+}
   @keyframes image-zoom {
     0% {
      
@@ -690,6 +657,30 @@ header{
     }
   }
   
+  @keyframes little-skew-down {
+      0%{
+          transform: rotate(2deg);
+          transform-origin: center;
+      }
+      50%{
+        transform: rotate(0deg);
+        transform-origin: center;
+      }
+      100%{
+        transform: rotate(-2deg);
+        transform-origin: center;
+      }
+  }
+  @keyframes little-skew-up {
+    0%{
+        transform: rotate(0deg);
+        transform-origin: center;
+    }
+    100%{
+      transform: rotate(2deg);
+      transform-origin: center;
+    }
+}
 //   scroll up
 .scroll-up {
 	header {
@@ -1088,7 +1079,15 @@ header{
         }
         
     }
-    
+
+.new-about{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 2rem;
+    background-color: #b284be;
+}            
     .about-page{
         height: auto;
         display: grid;
@@ -1936,16 +1935,17 @@ header{
         }
         
     }
-    .new-about{
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        // background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='20' height='20' patternTransform='scale(3) rotate(0)'><rect x='0' y='0' width='100%' height='100%' fill='hsla(141, 9%, 48%, 0)'/><path d='M 10,-2.55e-7 V 20 Z M -1.1677362e-8,10 H 20 Z'  stroke-width='1' stroke='hsla(0, 0%, 100%, 1)' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>");
-        background-image: url("./imgs/HOLOGRAPHIC.png");
-        background-color: #b284be;
+  
+     
+.new-about{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 2rem;
+    background-color: #b284be;
+}        
         
-    }
     .about-page{
         height: auto;
         display: grid;
@@ -2340,6 +2340,7 @@ header{
             display: flex;
             justify-content: center;
             align-items: center;
+            margin: 2 rem;
             // background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='20' height='20' patternTransform='scale(3) rotate(0)'><rect x='0' y='0' width='100%' height='100%' fill='hsla(141, 9%, 48%, 0)'/><path d='M 10,-2.55e-7 V 20 Z M -1.1677362e-8,10 H 20 Z'  stroke-width='1' stroke='hsla(0, 0%, 100%, 1)' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>");
             background-color: #6F8677;
             .blur{
@@ -2385,7 +2386,15 @@ header{
             }
             
         }
-        
+
+.new-about{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 2rem;
+    background-color: #b284be;
+}        
         .about-page{
             height: auto;
             display: grid;
