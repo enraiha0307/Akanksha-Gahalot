@@ -552,6 +552,59 @@ header nav .nav-open .social-links {
           transform: scale(1.1);
 }
 
+.wrapper .new-about {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin: 2rem;
+  background-image: url("./imgs/HOLOGRAPHIC2.png");
+  font-family: "Nova Oval",sans-serif;
+}
+
+.wrapper .new-about .about-ecclipse .ecclipse-1 {
+  -webkit-animation: little-skew-down 4s infinite alternate;
+          animation: little-skew-down 4s infinite alternate;
+}
+
+.wrapper .new-about .about-ecclipse .ecclipse-2 {
+  -webkit-animation: little-skew-up 4s  infinite alternate;
+          animation: little-skew-up 4s  infinite alternate;
+}
+
+.wrapper .new-about h1 {
+  color: #1a192e;
+  font-size: 7rem;
+}
+
+.wrapper .new-about img {
+  width: 11rem;
+}
+
+.wrapper .new-about a {
+  font-family: "Nova Oval",sans-serif;
+  letter-spacing: 2px;
+  text-decoration: none;
+  color: #1a192e;
+  font-size: 1.8rem;
+}
+
+.wrapper .new-about a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
 .wrapper .about-page {
   height: auto;
   display: -ms-grid;
@@ -716,6 +769,28 @@ header nav .nav-open .social-links {
   color: #EDF6E5;
 }
 
+@-webkit-keyframes line-expand {
+  0% {
+    -webkit-transform-origin: center;
+            transform-origin: center;
+  }
+  100% {
+    -webkit-transform-origin: center;
+            transform-origin: center;
+  }
+}
+
+@keyframes line-expand {
+  0% {
+    -webkit-transform-origin: center;
+            transform-origin: center;
+  }
+  100% {
+    -webkit-transform-origin: center;
+            transform-origin: center;
+  }
+}
+
 @-webkit-keyframes image-zoom {
   0% {
     -webkit-transform: scale(1) translateY(0);
@@ -743,6 +818,78 @@ header nav .nav-open .social-links {
             transform: scale(1.07) translateY(-15px);
     -webkit-transform-origin: top;
             transform-origin: top;
+  }
+}
+
+@-webkit-keyframes little-skew-down {
+  0% {
+    -webkit-transform: rotate(2deg);
+            transform: rotate(2deg);
+    -webkit-transform-origin: center;
+            transform-origin: center;
+  }
+  50% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    -webkit-transform-origin: center;
+            transform-origin: center;
+  }
+  100% {
+    -webkit-transform: rotate(-2deg);
+            transform: rotate(-2deg);
+    -webkit-transform-origin: center;
+            transform-origin: center;
+  }
+}
+
+@keyframes little-skew-down {
+  0% {
+    -webkit-transform: rotate(2deg);
+            transform: rotate(2deg);
+    -webkit-transform-origin: center;
+            transform-origin: center;
+  }
+  50% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    -webkit-transform-origin: center;
+            transform-origin: center;
+  }
+  100% {
+    -webkit-transform: rotate(-2deg);
+            transform: rotate(-2deg);
+    -webkit-transform-origin: center;
+            transform-origin: center;
+  }
+}
+
+@-webkit-keyframes little-skew-up {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    -webkit-transform-origin: center;
+            transform-origin: center;
+  }
+  100% {
+    -webkit-transform: rotate(2deg);
+            transform: rotate(2deg);
+    -webkit-transform-origin: center;
+            transform-origin: center;
+  }
+}
+
+@keyframes little-skew-up {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    -webkit-transform-origin: center;
+            transform-origin: center;
+  }
+  100% {
+    -webkit-transform: rotate(2deg);
+            transform: rotate(2deg);
+    -webkit-transform-origin: center;
+            transform-origin: center;
   }
 }
 
@@ -1190,6 +1337,20 @@ header nav .nav-open .social-links {
     transition: all 0.3s ease-in-out;
     -webkit-transform: scale(1.1);
             transform: scale(1.1);
+  }
+  .wrapper .new-about {
+    height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    margin: 2rem;
+    background-color: #b284be;
   }
   .wrapper .about-page {
     height: auto;
@@ -2178,13 +2339,13 @@ header nav .nav-open .social-links {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    background-image: url("./imgs/HOLOGRAPHIC.png");
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    margin: 2rem;
     background-color: #b284be;
   }
   .wrapper .about-page {
@@ -2650,6 +2811,7 @@ header nav .nav-open .social-links {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    margin: 2 rem;
     background-color: #6F8677;
   }
   .wrapper .projects .blur img {
@@ -2694,6 +2856,20 @@ header nav .nav-open .social-links {
     transition: all 0.3s ease-in-out;
     -webkit-transform: scale(1.1);
             transform: scale(1.1);
+  }
+  .wrapper .new-about {
+    height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    margin: 2rem;
+    background-color: #b284be;
   }
   .wrapper .about-page {
     height: auto;
