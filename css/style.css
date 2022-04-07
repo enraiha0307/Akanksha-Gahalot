@@ -358,6 +358,7 @@ header nav .nav-open .social-links {
 
 .wrapper .project-page {
   height: auto;
+  width: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -554,6 +555,7 @@ header nav .nav-open .social-links {
 
 .wrapper .new-about {
   height: 100vh;
+  width: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -567,7 +569,7 @@ header nav .nav-open .social-links {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   margin: 2rem;
-  background-image: url("./imgs/HOLOGRAPHIC2.png");
+  background-image: url("../imgs/HOLOGRAPHIC2.png");
   font-family: "Nova Oval",sans-serif;
 }
 
