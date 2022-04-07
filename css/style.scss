@@ -9,7 +9,7 @@
 }
 
 @mixin gradient-1 {
-    background-image: url("./imgs/HOLOGRAPHIC2.png");
+    background-image: url("../imgs/HOLOGRAPHIC2.png");
     
     
 }
@@ -188,7 +188,7 @@ header{
     display:flex;
     flex-direction: column;
       .homepage{
-        width: 100vw;;
+        width: 100vw;
         height: 100vh;
       display: flex;
       flex-direction: column-reverse;
@@ -310,7 +310,7 @@ header{
 
 .project-page{
     height: auto;
-    
+    width: auto;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -466,6 +466,7 @@ header{
 
 .new-about{
     height: 100vh;
+    width: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -504,9 +505,6 @@ header{
         }
     }
 
-    
-    
-    
 }        
 .about-page{
     height: auto;
